@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public bool isPaused = false;
     public GameObject pauseMenuUi;
+    public TextMeshProUGUI applesCollectedText;
+    public int applesCollected = 0;
     private List<AudioSource> audioSources = new List<AudioSource>();
     public List<AudioSource> excludedAudioSources = new List<AudioSource>();
 
@@ -25,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        applesCollectedText.text = "Apples Collected: 0";
     }
 
     
@@ -42,6 +45,13 @@ public class GameManager : MonoBehaviour
                 Resume();
             }
         }
+    }
+
+    public void CollectApples()
+    {
+        applesCollected++;
+        applesCollectedText.text = "Apples Collected: " + applesCollected;
+        Debug.Log("Apples Collected: " + applesCollected);
     }
     public void Resume()
     {
