@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public int health = 3;
     public TextMeshProUGUI healthText;
+    public AudioClip damageSound;
     private Rigidbody2D rb;
     private void Start()
     {
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamage(int damageValue)
     {
         health -= damageValue;
+        AudioSource.PlayClipAtPoint(damageSound, transform.position, 1f);
         healthText.text = health + "/3 Health";
         if (health <= 0)
         {

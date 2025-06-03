@@ -436,6 +436,7 @@ MonoBehaviour:
   maxX: 8
   minY: 5
   maxY: 5
+  appleSound: {fileID: 8300000, guid: d3c661d3898470f4a958d8be7ebd3329, type: 3}
 --- !u!1001 &411704809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -665,6 +666,7 @@ MonoBehaviour:
   moveSpeed: 10
   health: 3
   healthText: {fileID: 28762270}
+  damageSound: {fileID: 8300000, guid: 8fe8473913373294d8655ffdfdaf3093, type: 3}
 --- !u!61 &486607313
 BoxCollider2D:
   m_ObjectHideFlags: 0

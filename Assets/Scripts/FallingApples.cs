@@ -9,6 +9,7 @@ public class FallingApples : MonoBehaviour
     public float maxX = 8f;
     public float minY = 4f;
     public float maxY = 6f;
+    public AudioClip appleSound;
 
     private void Update()
     {
@@ -18,14 +19,15 @@ public class FallingApples : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            GameManager.instance.CollectApples();
+            AudioSource.PlayClipAtPoint(appleSound, transform.position, 1f);
+            GameManager.instance.CollectApples();            
             TeleportToRandomPosition();
             fallSpeed = fallSpeed + 0.1f;
         }
 
         if (collision.gameObject.CompareTag("Ground"))
-        {
-           collision.gameObject.GetComponent<PlayerMovement>().TakeDamage(1);
+        {       
+            PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
             TeleportToRandomPosition();
         }
     }
