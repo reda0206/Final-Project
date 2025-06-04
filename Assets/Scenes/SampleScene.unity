@@ -395,7 +395,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184753679}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -413,7 +413,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &327200018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8971656245173781275, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
@@ -445,6 +445,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3260165654059059944, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260165654059059944, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3260165654059059944, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -485,6 +493,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4653607858796913793, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653607858796913793, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653607858796913793, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653607858796913793, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242262795863182948, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b732d20514b4d44fad1d49e372f3b3e, type: 3}
     - target: {fileID: 8971656245173781275, guid: f017a7974d3d8c3479e1c0decf4e6ef1, type: 3}
       propertyPath: m_Name
       value: Apple
@@ -663,7 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 231f1466534fdd54983d1887f5b62555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 15
   health: 3
   healthText: {fileID: 28762270}
   damageSound: {fileID: 8300000, guid: 8fe8473913373294d8655ffdfdaf3093, type: 3}
@@ -710,7 +738,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.125, y: 0.125}
   m_EdgeRadius: 0
 --- !u!50 &486607314
 Rigidbody2D:
@@ -801,7 +829,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.5, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2227,7 +2255,7 @@ Transform:
   m_GameObject: {fileID: 2031152940}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 3, z: 0}
+  m_LocalPosition: {x: 5, y: 3, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

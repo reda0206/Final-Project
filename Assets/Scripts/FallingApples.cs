@@ -11,6 +11,13 @@ public class FallingApples : MonoBehaviour
     public float maxY = 6f;
     public AudioClip appleSound;
 
+    private PlayerMovement playerScript;
+
+    private void Start()
+    {
+        playerScript = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+    }
+
     private void Update()
     {
         transform.Translate(Vector2.down * fallSpeed * Time.deltaTime);
@@ -22,12 +29,13 @@ public class FallingApples : MonoBehaviour
             AudioSource.PlayClipAtPoint(appleSound, transform.position, 1f);
             GameManager.instance.CollectApples();            
             TeleportToRandomPosition();
-            fallSpeed = fallSpeed + 0.1f;
+            fallSpeed = fallSpeed + 0.2f;
         }
 
-        if (collision.gameObject.CompareTag("Ground"))
+        else if (collision.gameObject.CompareTag("Ground"))
         {       
-            PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+            Debug.Log("Apple hit the ground");
+            playerScript.TakeDamage(1);
             TeleportToRandomPosition();
         }
     }
